@@ -5,7 +5,7 @@ import javax.swing.*;
 class CalculatorApp extends JFrame implements KeyListener, ActionListener {
     JFrame jf;
     Container c;
-    JTextField disField;
+    JTextArea disField;
     JButton[] numberButtons;
     JButton addButton, subtractButton, multiplyButton, divisionButton, equalsButton, clearButton;
     JPanel panel;
@@ -33,9 +33,9 @@ class CalculatorApp extends JFrame implements KeyListener, ActionListener {
     public void initializeComponents() {
         c = getContentPane();
         panel = new JPanel(new GridLayout(4, 4, 20, 10));
-        Font f = new Font("courier new",Font.BOLD,15);
+        Font f = new Font("courier new",Font.BOLD,30);
         Cursor cr = new Cursor(Cursor.HAND_CURSOR);
-        disField = new JTextField(10);
+        disField = new JTextArea(10,10);
         disField.setEditable(false);
         disField.setFont(f);
 
