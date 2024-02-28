@@ -33,9 +33,11 @@ class CalculatorApp extends JFrame implements KeyListener, ActionListener {
     public void initializeComponents() {
         c = getContentPane();
         panel = new JPanel(new GridLayout(4, 4, 20, 10));
+        Font f = new Font("courier new",Font.BOLD,15);
         Cursor cr = new Cursor(Cursor.HAND_CURSOR);
         disField = new JTextField(10);
         disField.setEditable(false);
+        disField.setFont(f);
 
         
         numberButtons = new JButton[10];
@@ -127,7 +129,7 @@ class CalculatorApp extends JFrame implements KeyListener, ActionListener {
                     if (num2 != 0) {
                         result = num1 / num2;
                     } else {
-                        disField.setText("Error");
+                        disField.setText("Error"); 
                     }
                     break;
             }
